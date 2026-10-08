@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — [App Name]</title>
+<meta name="description" content="Privacy Policy for [App Name]: what data we collect, how we use and protect it, and how you can access or delete it.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://[your-username].github.io/[your-repo]/privacy/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f6ef7'/%3E%3Ctext x='50' y='68' font-size='58' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f5f7fb;
+    --card: #ffffff;
+    --text: #16181d;
+    --muted: #5b6270;
+    --border: #e3e6ee;
+    --accent: #3b56e0;
+    --accent-soft: #eef1fe;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(16, 20, 40, .05), 0 8px 28px rgba(16, 20, 40, .06);
+    --maxw: 1120px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1017;
+      --bg-soft: #131824;
+      --card: #151a26;
+      --text: #eef1f7;
+      --muted: #a3abbe;
+      --border: #242b3a;
+      --accent: #8ea2ff;
+      --accent-soft: #1b2338;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { position: static; display: inline-block; margin: 10px; padding: 8px 12px; background: var(--card); border: 1px solid var(--border); }
+
+  header.site {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+    backdrop-filter: saturate(160%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav { display: flex; align-items: center; gap: 18px; min-height: 62px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -.01em; color: var(--text); text-decoration: none; }
+  .logo { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #fff; font-size: 15px; font-weight: 800; }
+  .nav .spacer { flex: 1; }
+  .nav a.link { color: var(--muted); text-decoration: none; font-size: 15px; }
+  .nav a.link:hover { color: var(--text); }
+
+  .head { padding: 56px 0 40px; background: linear-gradient(180deg, var(--bg-soft), var(--bg)); border-bottom: 1px solid var(--border); }
+  h1 { margin: 0 0 14px; font-size: clamp(28px, 4.6vw, 42px); line-height: 1.15; letter-spacing: -.02em; }
+  .meta { margin: 0; color: var(--muted); font-size: 15px; }
+  .meta strong { color: var(--text); }
+  .intro { margin: 18px 0 0; max-width: 78ch; color: var(--muted); font-size: 17px; }
+
+  .layout { display: grid; gap: 44px; grid-template-columns: 1fr; padding: 48px 0 72px; }
+  @media (min-width: 980px) { .layout { grid-template-columns: 264px 1fr; gap: 56px; } }
+
+  nav.toc { font-size: 14.5px; }
+  @media (min-width: 980px) { nav.toc { position: sticky; top: 86px; align-self: start; max-height: calc(100vh - 110px); overflow: auto; } }
+  nav.toc h2 { margin: 0 0 12px; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); }
+  nav.toc ol { margin: 0; padding-left: 0; list-style: none; counter-reset: toc; }
+  nav.toc li { margin-bottom: 7px; counter-increment: toc; }
+  nav.toc a { color: var(--muted); text-decoration: none; display: block; }
+  nav.toc a::before { content: counter(toc) ". "; color: var(--accent); }
+  nav.toc a:hover { color: var(--text); text-decoration: underline; }
+
+  article { max-width: 74ch; }
+  article section { padding-bottom: 34px; margin-bottom: 34px; border-bottom: 1px solid var(--border); }
+  article section:last-of-type { border-bottom: 0; }
+  h2.sec { margin: 0 0 12px; font-size: clamp(20px, 2.6vw, 25px); letter-spacing: -.015em; }
+  h3 { margin: 22px 0 8px; font-size: 16.5px; letter-spacing: -.005em; }
+  p { margin: 0 0 14px; }
+  ul, ol.body { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; background: var(--accent-soft); padding: 1px 5px; border-radius: 5px; }
+
+  .callout { padding: 20px 22px; margin: 0 0 22px; background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius); box-shadow: var(--shadow); }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout h3 { margin-top: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 18px; font-size: 15px; }
+  caption { caption-side: top; text-align: left; color: var(--muted); font-size: 14px; padding-bottom: 8px; }
+  th, td { text-align: left; padding: 10px 12px; border: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--bg-soft); font-size: 14px; }
+  .table-scroll { overflow-x: auto; }
+
+  footer.site { padding: 36px 0 60px; background: var(--bg-soft); border-top: 1px solid var(--border); }
+  .foot { display: flex; flex-wrap: wrap; gap: 14px 26px; align-items: center; color: var(--muted); font-size: 14px; }
+  .foot .spacer { flex: 1; }
+  .foot nav { display: flex; flex-wrap: wrap; gap: 18px; }
+  .foot a { color: var(--muted); }
+  .foot a:hover { color: var(--text); }
+  @media print { header.site, nav.toc, footer.site { display: none; } .layout { display: block; padding: 0; } article { max-width: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../">
+      <span class="logo" aria-hidden="true">A</span>
+      <span>[App Name]</span>
+    </a>
+    <span class="spacer"></span>
+    <a class="link" href="../">Home</a>
+    <a class="link" href="mailto:[support@example.com]">Contact</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="meta">
+      <strong>Effective date:</strong> [Month DD, YYYY] &nbsp;·&nbsp;
+      <strong>Last updated:</strong> [Month DD, YYYY] &nbsp;·&nbsp;
+      <strong>Applies to:</strong> [App Name] and <a href="https://[your-username].github.io/[your-repo]/">[your-username].github.io/[your-repo]</a>
+    </p>
+    <p class="intro">
+      This Privacy Policy explains how [Company Name] (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) collects, uses,
+      stores, shares and protects information when you use [App Name] (the &ldquo;Service&rdquo;), including when you
+      sign in with your Google Account. It also explains the choices and rights you have over your information.
+    </p>
+    <p class="intro">
+      By using the Service you agree to the collection and use of information described in this policy.
+      If you do not agree, please do not use the Service.
+    </p>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#information-we-collect">Information we collect</a></li>
+      <li><a href="#google-user-data">Google user data</a></li>
+      <li><a href="#how-we-use">How we use information</a></li>
+      <li><a href="#legal-bases">Legal bases for processing</a></li>
+      <li><a href="#cookies">Cookies and local storage</a></li>
+      <li><a href="#sharing">How we share information</a></li>
+      <li><a href="#retention">Data retention</a></li>
+      <li><a href="#security">How we protect information</a></li>
+      <li><a href="#your-rights">Your rights and choices</a></li>
+      <li><a href="#deletion">Deleting your data</a></li>
+      <li><a href="#international">International data transfers</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#third-party">Third-party services and links</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">How to contact us</a></li>
+    </ol>
+  </nav>
+
+  <article id="main">
+
+    <section id="information-we-collect">
+      <h2 class="sec">1. Information we collect</h2>
+      <p>We collect only the information we need to operate the Service. Depending on how you use [App Name], this may include:</p>
+      <div class="table-scroll">
+        <table>
+          <caption>Categories of information collected</caption>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">Examples</th><th scope="col">Source</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Account information</td>
+              <td>Name, email address, profile picture URL, Google Account identifier (<code>sub</code>), email verification status</td>
+              <td>Provided by Google when you sign in</td>
+            </tr>
+            <tr>
+              <td>Content you provide</td>
+              <td>[Any data the user creates in the app, e.g. tasks, notes, files, settings, preferences]</td>
+              <td>Provided by you while using the Service</td>
+            </tr>
+            <tr>
+              <td>Technical and usage information</td>
+              <td>IP address, browser type and version, operating system, device type, pages or features used, timestamps, error and diagnostic logs</td>
+              <td>Collected automatically by our servers and hosting provider</td>
+            </tr>
+            <tr>
+              <td>Support communications</td>
+              <td>Messages you send us and our replies</td>
+              <td>Provided by you</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        We do <strong>not</strong> collect or store your Google Account password. Authentication is handled entirely by
+        Google's OAuth 2.0 service; we receive only the information described above. We do not knowingly collect
+        special categories of personal data (such as health, biometric, or political data) and ask that you do not
+        submit such data to the Service.
+      </p>
+    </section>
+
+    <section id="google-user-data">
+      <h2 class="sec">2. Google user data</h2>
+      <p>
+        [App Name] offers &ldquo;Sign in with Google&rdquo; as a login method. When you choose it, Google asks for your
+        consent and then shares the following information with us:
+      </p>
+      <ul>
+        <li>your basic Google profile information — name, email address and profile picture;</li>
+        <li>your unique Google Account identifier, used to distinguish your account from others;</li>
+        <li>[list any additional scopes you request, e.g. access to Google Drive files you select, Calendar events, etc. Delete this line if you request nothing beyond basic profile.]</li>
+      </ul>
+
+      <div class="callout">
+        <h3>Limited Use disclosure</h3>
+        <p>
+          [App Name]'s use of information received from Google APIs will adhere to the
+          <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+          including the <a href="https://developers.google.com/terms/api-services-user-data-policy#limited-use" rel="noopener">Limited Use requirements</a>.
+        </p>
+      </div>
+
+      <h3>What we do with Google user data</h3>
+      <ul>
+        <li>We use it to create your account, authenticate you on return visits, and display your name and profile picture inside the Service.</li>
+        <li>We use your email address to send essential service messages, such as sign-in or security notifications, and to respond to support requests.</li>
+        <li>We store it only for as long as your account exists, or as required by law.</li>
+      </ul>
+
+      <h3>What we never do with Google user data</h3>
+      <ul>
+        <li>We do not sell or rent it to anyone.</li>
+        <li>We do not use it for advertising, ad personalisation, or retargeting.</li>
+        <li>We do not use it to determine creditworthiness or for lending purposes.</li>
+        <li>We do not allow humans to read it, except where you give us explicit permission for support purposes, where it is necessary for security or abuse investigations, to comply with applicable law, or for internal operations permitted by the Limited Use requirements.</li>
+        <li>We do not transfer it to third parties except as needed to provide or improve the Service, to comply with the law, or as part of a merger or acquisition as described below.</li>
+        <li>We do not use it to train generalised artificial intelligence or machine learning models.</li>
+      </ul>
+
+      <h3>Revoking our access</h3>
+      <p>
+        You can withdraw our access to your Google Account at any time on your
+        <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account permissions page</a>.
+        Revoking access stops future data collection; see <a href="#deletion">section 10</a> for how to have data we
+        already hold deleted.
+      </p>
+    </section>
+
+    <section id="how-we-use">
+      <h2 class="sec">3. How we use information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>provide, operate, maintain and improve the Service;</li>
+        <li>create your account and authenticate you;</li>
+        <li>personalise your experience and remember your settings;</li>
+        <li>respond to your requests, questions and support enquiries;</li>
+        <li>send service-related notices, such as changes to this policy or to our terms;</li>
+        <li>monitor usage, diagnose errors, and keep the Service secure against fraud and abuse;</li>
+        <li>comply with legal obligations and enforce our agreements.</li>
+      </ul>
+      <p>We do not use your information for automated decision-making that produces legal or similarly significant effects.</p>
+    </section>
+
+    <section id="legal-bases">
+      <h2 class="sec">4. Legal bases for processing</h2>
+      <p>
+        Where the EU or UK General Data Protection Regulation applies, we process your personal data on the
+        following legal bases:
+      </p>
+      <ul>
+        <li><strong>Performance of a contract</strong> — to provide the Service you requested (for example, creating and securing your account).</li>
+        <li><strong>Legitimate interests</strong> — to keep the Service secure, prevent abuse, and improve our features, balanced against your rights.</li>
+        <li><strong>Consent</strong> — where you have given it, for example by approving the Google permissions screen. You may withdraw consent at any time.</li>
+        <li><strong>Legal obligation</strong> — to comply with applicable law and lawful requests.</li>
+      </ul>
+    </section>
+
+    <section id="cookies">
+      <h2 class="sec">5. Cookies and local storage</h2>
+      <p>
+        The Service uses a small number of strictly necessary cookies and browser storage entries to keep you signed
+        in and to protect against cross-site request forgery. These are required for the Service to function and
+        cannot be switched off from within the Service.
+      </p>
+      <p>
+        [If you use analytics or any non-essential cookie, describe it here, state whether it is first- or
+        third-party, what it collects and how long it lasts, and how users can opt out. If you use none, replace
+        this paragraph with: &ldquo;We do not use advertising, profiling or third-party analytics cookies.&rdquo;]
+      </p>
+      <p>
+        You can block or delete cookies through your browser settings, but parts of the Service may then stop
+        working. This site is served by GitHub Pages; GitHub may set its own cookies and process request data as
+        described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.
+      </p>
+    </section>
+
+    <section id="sharing">
+      <h2 class="sec">6. How we share information</h2>
+      <p>We do not sell your personal information. We share it only in the limited circumstances below.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>Recipients of personal information</caption>
+          <thead>
+            <tr><th scope="col">Recipient</th><th scope="col">Purpose</th><th scope="col">Data involved</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Google LLC</td><td>Sign-in and authentication (OAuth 2.0)</td><td>Authentication tokens and basic profile information, handled on Google's infrastructure</td></tr>
+            <tr><td>GitHub, Inc.</td><td>Static hosting of this website via GitHub Pages</td><td>Request metadata such as IP address and user agent, as described in GitHub's privacy statement</td></tr>
+            <tr><td>[Hosting / database / email provider]</td><td>[Application hosting, data storage, transactional email]</td><td>[Account information, content you provide, technical logs]</td></tr>
+            <tr><td>Professional advisers and authorities</td><td>Compliance with law, legal claims, or protection of rights and safety</td><td>Only what is strictly required by the request</td></tr>
+            <tr><td>A successor entity</td><td>Merger, acquisition, financing, or sale of assets</td><td>Information transferred as part of the transaction, subject to this policy</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Service providers act on our instructions under written agreements and are not permitted to use your
+        information for their own purposes. We may also disclose aggregated or de-identified information that cannot
+        reasonably be used to identify you.
+      </p>
+    </section>
+
+    <section id="retention">
+      <h2 class="sec">7. Data retention</h2>
+      <p>
+        We keep personal information only as long as necessary for the purposes described in this policy:
+      </p>
+      <ul>
+        <li><strong>Account information</strong> — while your account is active, and for up to [30] days after you request deletion, to allow recovery from accidental deletion and to complete backup rotation.</li>
+        <li><strong>Content you provide</strong> — until you delete it or delete your account.</li>
+        <li><strong>Technical and security logs</strong> — for up to [90] days, unless a longer period is required to investigate a security incident or comply with law.</li>
+        <li><strong>Support correspondence</strong> — for up to [24] months after the enquiry is closed.</li>
+        <li><strong>Records required by law</strong> — for the period required by applicable tax, accounting or other legislation.</li>
+      </ul>
+      <p>When a retention period ends, we delete or irreversibly anonymise the data.</p>
+    </section>
+
+    <section id="security">
+      <h2 class="sec">8. How we protect information</h2>
+      <p>
+        We use technical and organisational measures designed to protect your information, including transport
+        encryption (HTTPS/TLS) for data in transit, access controls that limit who can reach production data,
+        and keeping our dependencies up to date. This website itself is a static set of files and does not store
+        personal data on GitHub Pages.
+      </p>
+      <p>
+        No method of transmission or storage is completely secure. We cannot guarantee absolute security, and you
+        use the Service at your own risk. If we become aware of a breach affecting your personal data, we will
+        notify you and the relevant authorities as required by applicable law.
+      </p>
+    </section>
+
+    <section id="your-rights">
+      <h2 class="sec">9. Your rights and choices</h2>
+      <p>Depending on where you live, you may have some or all of the following rights:</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction</strong> — ask us to fix inaccurate or incomplete data.</li>
+        <li><strong>Deletion</strong> — ask us to delete your personal data.</li>
+        <li><strong>Restriction and objection</strong> — ask us to limit or stop certain processing.</li>
+        <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
+        <li><strong>Withdraw consent</strong> — at any time, without affecting processing carried out before withdrawal.</li>
+        <li><strong>Non-discrimination</strong> — we will not degrade the Service because you exercised a privacy right.</li>
+      </ul>
+      <p>
+        To exercise any of these rights, email <a href="mailto:[support@example.com]">[support@example.com]</a>.
+        We may ask you to verify your identity, and we will respond within the timeframe required by applicable law
+        (usually 30 days). You also have the right to complain to your local data protection authority.
+      </p>
+      <p>
+        <strong>California residents:</strong> in the past 12 months we have collected the categories of personal
+        information listed in section 1 for the purposes in section 3, and have disclosed them only to the
+        categories of recipients in section 6. We do not sell personal information and do not share it for
+        cross-context behavioural advertising.
+      </p>
+    </section>
+
+    <section id="deletion">
+      <h2 class="sec">10. Deleting your data</h2>
+      <p>You can have your data removed in either of the following ways:</p>
+      <ol class="body">
+        <li>
+          <strong>Revoke Google access.</strong> Visit your
+          <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account permissions page</a>,
+          select [App Name], and remove its access. This stops any future collection immediately.
+        </li>
+        <li>
+          <strong>Request deletion from us.</strong> Email
+          <a href="mailto:[support@example.com]?subject=Data%20deletion%20request%20-%20[App%20Name]">[support@example.com]</a>
+          from the email address associated with your account, with the subject &ldquo;Data deletion request&rdquo;.
+          We will confirm receipt and delete your account and associated personal data within [30] days, except for
+          records we are legally required to keep.
+        </li>
+      </ol>
+      <p>
+        [If the Service offers an in-app option, add: &ldquo;You can also delete your account from
+        Settings &rarr; Account &rarr; Delete account.&rdquo;]
+      </p>
+    </section>
+
+    <section id="international">
+      <h2 class="sec">11. International data transfers</h2>
+      <p>
+        We are based in [Country]. Our service providers may store or process your information in other countries,
+        including the United States. Where we transfer personal data out of the European Economic Area, the United
+        Kingdom or Switzerland, we rely on appropriate safeguards such as the European Commission's Standard
+        Contractual Clauses or an adequacy decision, and we take steps to ensure your data receives an adequate
+        level of protection.
+      </p>
+    </section>
+
+    <section id="children">
+      <h2 class="sec">12. Children's privacy</h2>
+      <p>
+        The Service is not directed to children under 13 (or under 16 where required by local law), and we do not
+        knowingly collect personal information from them. If you believe a child has provided us with personal
+        information, contact <a href="mailto:[support@example.com]">[support@example.com]</a> and we will delete it
+        promptly.
+      </p>
+    </section>
+
+    <section id="third-party">
+      <h2 class="sec">13. Third-party services and links</h2>
+      <p>
+        The Service may link to third-party websites or integrate with third-party services. Their privacy practices
+        are governed by their own policies, and we are not responsible for their content or practices. We encourage
+        you to read the privacy policy of any third-party service you use.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2 class="sec">14. Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. When we do, we will revise the &ldquo;Last updated&rdquo;
+        date at the top of this page and, for material changes, provide a more prominent notice within the Service or
+        by email. Continued use of the Service after an update means you accept the revised policy.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2 class="sec">15. How to contact us</h2>
+      <p>For any question, request or complaint about this policy or your personal data:</p>
+      <ul>
+        <li><strong>Controller:</strong> [Company Name]</li>
+        <li><strong>Email:</strong> <a href="mailto:[support@example.com]">[support@example.com]</a></li>
+        <li><strong>Postal address:</strong> [Street address, City, Postal code, Country]</li>
+        <li><strong>Website:</strong> <a href="https://[your-username].github.io/[your-repo]/">https://[your-username].github.io/[your-repo]/</a></li>
+      </ul>
+      <p>
+        We aim to respond to all privacy enquiries within [X] business days. If you are in the EU or UK and are not
+        satisfied with our response, you may lodge a complaint with your national data protection authority.
+      </p>
+    </section>
+
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap foot">
+    <span>&copy; <span id="year">2025</span> [Company Name]. All rights reserved.</span>
+    <span class="spacer"></span>
+    <nav aria-label="Footer">
+      <a href="../">Home</a>
+      <a href="#main">Back to top</a>
+      <a href="mailto:[support@example.com]">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
